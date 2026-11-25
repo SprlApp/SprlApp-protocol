@@ -1,0 +1,16 @@
+{
+  "name": "sprl",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SPRL — holders pick the ticker. Same coin.",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "test": "node scripts/verify.mjs && node scripts/audit-motion.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.0"
+  }
+}

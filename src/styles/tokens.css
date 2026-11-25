@@ -1,0 +1,68 @@
+/*
+  TOKENS — the only file in the project allowed to hold colour literals (standing rule 4).
+  Every hex below was sampled from a real pixel population; nothing is invented.
+
+  PALETTE PROVENANCE (scripts/palette.mjs, scripts/palette2.mjs; sampled via sharp, alpha>=250 only)
+  brand/LOGO SPRL PNG...png  (2000x2000, IHDR colourtype 6 RGBA, 3,343,525 pure-black transparent px -> premultiplied resize)
+    --c-cyan    #75c2fa  mean of 300 most-saturated opaque px, hue family 180deg
+    --c-blue    #79b2fa  same, hue family 210deg (largest family, 192k px)
+    --c-violet  #9c89f9  same, hue family 240deg
+    --c-orchid  #d18ff3  same, hue family 270deg
+    --c-pink    #f6b0e5  same, hue family 300deg
+    --c-peach   #fcdbca  same, hue family 0deg
+    --c-mint    #bcece3  same, hue family 150deg
+    --c-mist    #f1f3f5  mean of all unsaturated opaque px of the logo
+  brand/LOGO SPRL PNG.png    (opaque variant) dominant pixel 87.9% = #f8f8f8
+    --c-paper   #f8f8f8
+  reference/SPRL 1.jpg.jpeg  (1600x900 JPEG, lower half, darkest 5%)  --c-ink   #01224e  deep ocean navy
+  reference/SPRL 1.jpg.jpeg  (lower half, 40-50th luminance pct)      --c-ocean #1c4e83  mid ocean
+  reference/SAMPUL SPRL JPG  (1500x500 JPEG, darkest 10%)             --c-slate #10191f  storm slate
+*/
+:root {
+  --c-cyan: #75c2fa;
+  --c-blue: #79b2fa;
+  --c-violet: #9c89f9;
+  --c-orchid: #d18ff3;
+  --c-pink: #f6b0e5;
+  --c-peach: #fcdbca;
+  --c-mint: #bcece3;
+  --c-mist: #f1f3f5;
+  --c-paper: #f8f8f8;
+  --c-ink: #01224e;
+  --c-ocean: #1c4e83;
+  --c-slate: #10191f;
+
+  --color-accent: var(--c-violet);
+  --bg: var(--c-paper);
+  --bg2: var(--c-mist);
+  --bg3: color-mix(in srgb, var(--c-mist) 78%, var(--c-blue));
+  --line: color-mix(in srgb, var(--c-ink) 9%, var(--c-paper));
+  --line2: color-mix(in srgb, var(--c-ink) 17%, var(--c-paper));
+  --ink: var(--c-ink);
+  --ink2: color-mix(in srgb, var(--c-ink) 82%, var(--c-paper));
+  --mute: color-mix(in srgb, var(--c-ink) 66%, var(--c-paper));
+  --dim: color-mix(in srgb, var(--c-ink) 42%, var(--c-paper));
+  --on-ink: var(--c-paper);
+  --up: color-mix(in srgb, var(--c-mint) 42%, var(--c-ink));
+  --down: color-mix(in srgb, var(--c-pink) 46%, var(--c-ink));
+  --iri: linear-gradient(120deg, var(--c-cyan) 0%, var(--c-violet) 35%, var(--c-pink) 68%, var(--c-mint) 100%);
+  --glass: color-mix(in srgb, var(--c-paper) 74%, transparent);
+  --glass-line: color-mix(in srgb, var(--c-paper) 90%, transparent);
+  --bar: color-mix(in srgb, var(--c-paper) 94%, transparent);
+  --shadow: 0 1px 2px color-mix(in srgb, var(--c-ink) 5%, transparent), 0 8px 24px -12px color-mix(in srgb, var(--c-ocean) 14%, transparent);
+  --shadow-lg: 0 2px 4px color-mix(in srgb, var(--c-ink) 5%, transparent), 0 24px 60px -24px color-mix(in srgb, var(--c-ocean) 26%, transparent);
+  --spot: color-mix(in srgb, var(--c-violet) 18%, transparent);
+  --grid-line: color-mix(in srgb, var(--c-ink) 4%, transparent);
+
+  --tile-0: color-mix(in srgb, var(--c-cyan) 55%, var(--c-paper));
+  --tile-1: color-mix(in srgb, var(--c-blue) 55%, var(--c-paper));
+  --tile-2: color-mix(in srgb, var(--c-violet) 55%, var(--c-paper));
+  --tile-3: color-mix(in srgb, var(--c-orchid) 55%, var(--c-paper));
+  --tile-4: color-mix(in srgb, var(--c-pink) 60%, var(--c-paper));
+  --tile-5: color-mix(in srgb, var(--c-mint) 70%, var(--c-paper));
+
+  --sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --r: 16px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}

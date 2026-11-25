@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>SPRL · holders pick the ticker</title>
+  <meta name="description" content="SPRL lets wallets that stay decide how their coin is labelled. A snappier lookalike lands, ballots go out, the coin evolves." />
+  <meta name="theme-color" content="%THEME_COLOR%" />
+  <link rel="canonical" href="https://sprl.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SPRL" />
+  <meta property="og:url" content="https://sprl.app/" />
+  <meta property="og:title" content="SPRL · holders pick the ticker" />
+  <meta property="og:description" content="Hold it. Vote it. Name it." />
+  <meta property="og:image" content="https://sprl.app/brand/sprl-logo-512.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="32x32" />
+  <link rel="apple-touch-icon" href="brand/sprl-logo-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="#top" aria-label="SPRL home">
+        <img class="brand-mark" src="brand/sprl-logo-96.png" width="32" height="32" alt="" />
+        <span class="brand-word">SPRL</span>
+      </a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#board">Board</a><a href="#loop">The loop</a><a href="#burn">Burn</a><a href="#faq">FAQ</a>
+      </nav>
+      <div class="grow"></div>
+      <div class="social" data-slot="social" aria-label="Social links"></div>
+    </div>
+    <div class="ca-strip" data-register="ca"><div class="wrap" data-slot="ca"></div></div>
+  </header>
+
+  <section class="ticker" aria-label="Live ticker" data-slot="ticker"><div class="ticker-track" data-slot="ticker-track"></div></section>
+
+  <main id="top">
+    <section class="hero2">
+      <div class="hero-glow" data-depth="0.35" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="blob b4"></i></div>
+      <div class="wrap hero-wrap">
+        <div class="hero-mark-wrap" data-depth="0.8"><img class="hero-mark" src="brand/sprl-logo-512.png" width="132" height="132" alt="SPRL logo" /></div>
+        <span class="pill-live"><i class="live-dot"></i><span data-slot="live-label">Streaming from Solana</span></span>
+        <h1 class="hero-h">Hold it.<br />Vote it.<br />Name it.</h1>
+        <p class="hero-lede">Lookalikes borrow a story and slap a louder label over it. SPRL puts the steering wheel with wallets that stay, so the crowd settles what happens to the label.</p>
+        <div class="hero-cta">
+          <a class="btn primary lg" href="#board">Watch the tape</a>
+          <a class="btn lg" href="#loop">See the loop</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>Solana</b><span>mainnet</span></div>
+          <div><b>Holders</b><span>cast ballots</span></div>
+          <div><b>Burn</b><span>baked in</span></div>
+        </div>
+        <div class="demo" data-spot data-depth="0.5">
+          <div class="demo-head"><i class="demo-dot"></i><span>Ticker poll</span><span class="grow"></span><span class="demo-tag">Illustration</span></div>
+          <div class="demo-body">
+            <div class="demo-coin"><div class="demo-pic"></div>
+              <div><div class="demo-tick"><span class="old">$OLDNAME</span><span class="arrow">&rarr;</span><span>$SHARPER</span></div><div class="demo-sub">A lookalike arrived wearing a snappier label</div></div></div>
+            <div class="demo-votes">
+              <div><span>Switch to the challenger</span><span>Majority</span></div>
+              <div class="demo-bar"><i style="width:68%"></i></div>
+              <div><span>Stay put</span><span>Minority</span></div>
+              <div class="demo-bar keep"><i style="width:32%"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec big wrap" id="board">
+      <div class="sec-h" data-reveal>
+        <h2>Market board</h2><span class="count">Most-boosted tokens, refreshed constantly</span>
+        <span class="status-pill" data-slot="board-status"><i class="live-dot"></i><span>Loading</span></span>
+      </div>
+      <div class="board" data-slot="board" data-reveal data-reveal-delay="80">
+        <div class="row coin-row head" aria-hidden="true"><span></span><span>Token</span><span class="r">Price</span><span class="r">24h</span><span class="r c-vol">Volume</span><span class="r c-liq">Liquidity</span></div>
+        <div data-slot="rows"></div>
+      </div>
+      <p class="board-note" data-slot="board-note" role="status"></p>
+    </section>
+
+    <section class="sec big wrap" id="loop">
+      <div class="sec-h" data-reveal><h2>The loop</h2><span class="count">Four beats, zero restarts</span></div>
+      <div class="steps">
+        <article class="step" data-spot data-reveal><span class="n">1</span><h3>A twin arrives</h3><p>A lookalike ships, flaunting a louder label than its older sibling.</p></article>
+        <article class="step" data-spot data-reveal data-reveal-delay="80"><span class="n">2</span><h3>Wallets get ballots</h3><p>Wallets that remain carry weight. Nobody slips in through a side door.</p></article>
+        <article class="step" data-spot data-reveal data-reveal-delay="160"><span class="n">3</span><h3>The crowd chooses</h3><p>Stick with the label you have or swap to the challenger. Majority decides.</p></article>
+        <article class="step" data-spot data-reveal data-reveal-delay="240"><span class="n">4</span><h3>Onward</h3><p>Mint, candles and people stay where they are. Just the label shifts.</p></article>
+      </div>
+    </section>
+
+    <section class="sec big wrap" id="burn">
+      <div class="sec-h" data-reveal><h2>Burn signal</h2><span class="count">Skin in the game, openly</span></div>
+      <div class="tiles">
+        <article class="card" data-spot data-reveal><h3>Burn with intent</h3><p>Tokens thrown into the fire leave circulation for good, and everybody gets to watch.</p></article>
+        <article class="card" data-spot data-reveal data-reveal-delay="80"><h3>Presence you can see</h3><p>Every burn is a visible stamp saying somebody turned up and meant it.</p></article>
+        <article class="card" data-spot data-reveal data-reveal-delay="160"><h3>Receipts, not promises</h3><p>A ledger trail will always outrank a pledge.</p></article>
+      </div>
+    </section>
+
+    <section class="sec big wrap" id="voices">
+      <div class="sec-h" data-reveal><h2>Who it is for</h2></div>
+      <div data-reveal>
+        <div class="tabs" role="tablist" aria-label="Audience" data-slot="tabs">
+          <button role="tab" class="on" aria-selected="true" data-tab="0">Holders</button>
+          <button role="tab" aria-selected="false" data-tab="1">Builders</button>
+          <button role="tab" aria-selected="false" data-tab="2">Traders</button>
+        </div>
+        <div class="tab-panels">
+          <p class="tab-panel on" data-panel="0">Bags earn ballots. Whatever your bag contains does the talking, and it carries weight the instant a challenger lands.</p>
+          <p class="tab-panel" data-panel="1">Ship with confidence that a clone cannot quietly poach your people. They get to respond, and their response sticks.</p>
+          <p class="tab-panel" data-panel="2">A single mint to track. A fresh label never wipes the candles you have been reading from day one.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec big wrap" id="faq">
+      <div class="sec-h" data-reveal><h2>Questions</h2></div>
+      <div class="faq" data-slot="faq" data-reveal>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>So what exactly is SPRL?</span><i></i></button><div class="faq-a"><div><p>A Solana-native project: wallets carrying a token pick its label whenever a snappier twin turns up.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Does the address shift when labels swap?</span><i></i></button><div class="faq-a"><div><p>Never. Address stays fixed. Ballots only choose which label people read.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Where is CA shown?</span><i></i></button><div class="faq-a"><div><p>The bar pinned above everything fills in once the address surfaces. Until then that slot stays locked, so no other string here can pass as it.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Does the tape depend on SPRL?</span><i></i></button><div class="faq-a"><div><p>Not at all. It tracks boosted Solana tokens independently. SPRL claims row one after its address goes public.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Where do I follow along?</span><i></i></button><div class="faq-a"><div><p>Tap the account icon in the upper right corner.</p></div></div></div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="end-cta" data-reveal>
+        <img src="brand/sprl-logo-192.png" width="72" height="72" alt="" />
+        <h2>Keep your people.<br />Swap the label.</h2>
+        <div class="hero-cta"><a class="btn primary lg" href="#board">Back to the tape</a><span data-slot="cta-x"></span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand"><a class="brand" href="#top"><img class="brand-mark" src="brand/sprl-logo-96.png" width="32" height="32" alt="" /><span class="brand-word">SPRL</span></a><p>Wallets choose the label. The asset stays itself.</p></div>
+        <div class="foot-col"><h4>Explore</h4><a href="#board">Board</a><a href="#loop">The loop</a><a href="#burn">Burn</a><a href="#faq">FAQ</a></div>
+        <div class="foot-col" data-slot="foot-community"><h4>Community</h4></div>
+        <div class="foot-col"><h4>Network</h4><span>Solana mainnet</span><span data-slot="rpc"></span></div>
+      </div>
+      <div class="foot-bot"><span>SPRL · sprl.app</span><span>Figures come from open feeds. This is not financial advice.</span></div>
+    </div>
+  </footer>
+</body>
+</html>
